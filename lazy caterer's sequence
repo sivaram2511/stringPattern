@@ -1,0 +1,36 @@
+noOFRow = 6
+num = 0
+pos = 0
+
+for i in range(noOFRow, 0, -1):
+    col = noOFRow - i
+    pos = col
+    for j in range(0, col + 1, 1):
+        degree = 1
+        inc = i + 1
+        while(degree <= pos):
+            if (degree == 1):
+                num = inc
+            elif(degree == 2):
+                num = inc + inc
+            else:
+                inc = inc + 1
+                num = num + inc
+            degree = degree + 1
+
+        if (j == col):
+            print(1, end=" ")
+        else:
+            print(num, end=" ")
+    
+        pos = pos - 1
+    print()
+
+--------------------------------------------------------
+
+1 
+6 1 
+10 5 1 
+13 8 4 1 
+15 10 6 3 1 
+16 11 7 4 2 1
